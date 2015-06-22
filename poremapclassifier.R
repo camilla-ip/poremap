@@ -10,7 +10,7 @@
 # Usage:                                                                      #
 #                                                                             #
 #     Rscript poremapclassifier.R \                                           #
-#         runid \
+#         runid \                                                             #
 #         training_alignstats_path \                                          #
 #         testing_alignstats_path \                                           #
 #         outdir \                                                            #
@@ -234,7 +234,7 @@ training_modeltest <- training_splits$testset
 # for the modeltest data.                                                     #
 #                                                                             #
 # Allocate the test data point to "minion" if the prediction of being "minion"#
-# (i.e., of being datatype=1) has a probability >= probability_threshold     #
+# (i.e., of being datatype=1) has a probability >= probability_threshold      #
 # which has been set to the quite stringent value of 0.99.                    #
 # It means we have a low false positive rate (i.e., low chance of incorrectly #
 # classifying a real read as random) but a high false negative rate (i.e., a  #
@@ -285,7 +285,6 @@ result_data <- data.frame(
     testing_data$datatype, testing_data$mapprog, testing_data$mapparams, testing_data$samflag,
     testing_data$refcontigid, testing_data$refcontigpos1, testing_data$mapq, testing_isminion)
 colnames(result_data) <- c("runid", "readid", "readtype", "readclass", "datatype", "mapprog", "mapparams", "samflag", "refcontigid", "refcontigpos1", "mapq", "isnonrandomaln")
-#result_data$isnonrandomaln <- testing_isminion
 write.table(result_data, file=result_outpath, append=FALSE, quote=FALSE, sep="\t", row.names=FALSE)
 quit(status=0)
 
