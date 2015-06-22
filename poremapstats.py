@@ -1074,9 +1074,6 @@ if __name__ == '__main__':
     Initialise()
     Reference_Parse()
     AlignStats_Print(_PA.args.savealignments)
-    #if _PA.args.alignclasspath is None:
-    #    sys.stdout.write('Info: Finished poremapstats successfully\n')
-    #    sys.exit(0)
     ReadStats_Print()
     RunStats_Print()
     sys.stdout.write('Info: Finished poremapstats successfully\n')
