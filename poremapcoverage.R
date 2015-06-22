@@ -28,7 +28,7 @@
 # =========================================================================== #
 
 # =========================================================================== #
-# Constants
+# Constants                                                                   #
 # =========================================================================== #
 
 # Palettes from http://blog.mollietaylor.com/2012/10/color-blindness-and-palette-choice.html
@@ -47,7 +47,7 @@ randwin_color <- cbPaletteDk[2]
 bothwin_color <- cbPaletteDk[3]
 
 # =========================================================================== #
-# Command-line arguments
+# Command-line arguments                                                      #
 # =========================================================================== #
 
 args <- commandArgs(trailingOnly = TRUE)
@@ -81,7 +81,7 @@ winflanksz <- 10
 plot_path <- sprintf("%s/%s_coverage.png", outdir, outprefix)
 
 # =========================================================================== #
-# Create 6 line plots on one graph                                            #
+# Create 3 line plots on one graph                                            #
 # =========================================================================== #
 
 data <- read.table(depthpath, header=TRUE, sep="\t", blank.lines.skip=TRUE)
