@@ -1,6 +1,6 @@
 # poremap version 0.1.1
 Pipeline for nanopore read alignment and statistics
-
+```
 Usage:
 
   poremap.py [-h] --bindir DIR [--profilepath STR] --runid STR --readtype
@@ -132,4 +132,4 @@ Pre-conditions:
     to find auxiliary programs and python packages.
   - profilepath is useful for storing BASH commands for changing the environment
     before running it SGE scheduling.
-
+```
